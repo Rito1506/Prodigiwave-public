@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+.Heading_1{
+    font-family: "unbounded";
+    font-weight: 400;
+    font-size: 70px;
+    text-align: center;
+    line-height: 0.9em;
+}
+
+.Heading_Inner_Pages{
+    font-family: "unbounded";
+    font-weight: '400';
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.1em;
+}
+
+.Heading_2{
+    font-family: "unbounded";
+    font-weight: 400;
+    text-align: left;
+    font-size: 40px;
+    line-height: 1.1em;
+}
+
+.Heading_3{
+    font-family: "unbounded";
+    font-weight: 400;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.3em;
+}
+
+.Heading_4{
+    font-family: "unbounded";
+    font-weight: 300;
+    text-align: left;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.Heading_5{
+    font-family: "unbounded";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4em;
+}
+
+.Paragraph_L{
+    font-family: "montserrat";
+    font-weight: 400;
+    text-align: left;
+    font-size: 30px;
+    line-height: 1.3em;
+}
+
+.Paragraph_M{
+    font-family: "montserrat";
+    font-weight: 400;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.Paragraph_S{
+    font-family: "montserrat";
+    font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5em;
+} 
+
+.Paragraph_XS{
+    font-family: "montserrat";
+    font-weight: 400;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5em;
+} 
+
+.Body_XXL{
+    font-family: "unbounded";
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 1.2em;
+}
+
+.Body_Uppercase{
+    font-family: "unbounded";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.Display_Text{
+    font-family: "unbounded";
+    font-weight: 600;
+    text-align: left;
+    font-size: 50px;
+    line-height: 0.8em;
+}
+
+.Label{
+    font-family: "montserrat";
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 2em;
+}
+
+.Nav{
+    font-family: "unbounded";
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 12px;
+    line-height: 2em;
+}
+
+.link{
+    color: white;
+    cursor: pointer;
+
+}
+.link:hover{
+    color: #CCFF00;
+    text-decoration: underline;
+}
+
+.Button-Font{
+    font-family: "unbounded";
+    font-weight: 400;
+    font-size: 15px;
+}
