@@ -16,7 +16,7 @@ export default function FooterSocials() {
             </div>
          </div>
       </div>
-      <div className="flex text-xs justify-end mt-10"><p className="">@designed by Rito@1506</p></div>
+      <div className="flex text-xs justify-end mt-10"><p className="">@designed by Rohit Kumar</p></div>
     </>
   )
 }
