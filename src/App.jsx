@@ -1,16 +1,19 @@
-import { useState } from 'react'
+import { Routes, Route } from "react-router-dom";
 import "tailwindcss";
-import Footer from '../src/Components/footer'
-import Header from '../src/Components/header'
-import Navbar from '../src/Components/navbar'
+import Maintenance from './Components/404_Page'
+import Services from './Components/Services'
 import './App.css'
+
 
 
 export default function App() {
 
   return (
     <>
-      <Header/>
+    <Routes>
+    <Route path="/" element={<Maintenance/>} />
+    <Route path="/services" element={<Services/>} />
+    </Routes>
     </>
   )
 }

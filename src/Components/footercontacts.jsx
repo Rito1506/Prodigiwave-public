@@ -1,31 +1,51 @@
+import { useState } from "react";
+
 export default function FooterContacts() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [pagesOpen, setPagesOpen] = useState(false);
+
   return (
-    <div className="w-full bg-[#0d0d0d] text-white p-5 mt-10 rounded-3xl shadow-lg font-[inter] Paragraph_XS ">
-      <div className=" w-full mx-auto flex flex-col md:flex-row justify-between items-start">
+    <div className="w-full bg-[#0d0d0d] text-white p-5 mt-10 rounded-3xl shadow-lg font-[inter] Paragraph_XS">
+      <div className="w-full mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+
         {/* Contact Info Section */}
-        <div className="w-1/2 pr-10 space-y-3 -top-3 left-6 ">
-          {/* Email */}
-          <div className="bg-[#1a1a1a] px-10 py-6 m rounded-3xl shadow-md relative w-full link link-hover">
-            <span className="text-[#CCFF00] text-xl absolute "><img src="/mail.png" alt="" /></span>
-            <p className="text-sm font-light mt-10 ">Prodigiwaveofficial@gmail.com</p>
+        <div className="w-full md:w-1/2 space-y-5">
+          <div className="bg-[#1a1a1a] px-10 py-6 rounded-3xl shadow-md relative link link-hover">
+            <span className="absolute top-5 left-5">
+              <img src="/mail.png" alt="Mail" className="w-6 h-6" />
+            </span>
+            <p className="text-sm font-light mt-10">Prodigiwaveofficial@gmail.com</p>
           </div>
-          {/* Phone */}
-          <div className="bg-[#1a1a1a] px-10 py-5 rounded-3xl shadow-md relative w-full link link-hover">
-            <span className="text-[#CCFF00] text-xl absolute "><img src="/phone.png" alt="" /></span>
-            <p className="text-sm font-light mt-10 font-[] ">+91-7903768481</p>
+
+          <div className="bg-[#1a1a1a] px-10 py-6 rounded-3xl shadow-md relative link link-hover">
+            <span className="absolute top-5 left-5">
+              <img src="/phone.png" alt="Phone" className="w-6 h-6" />
+            </span>
+            <p className="text-sm font-light mt-10">+91-7903768481</p>
           </div>
-          {/* Address */}
-          <div className="bg-[#1a1a1a] px-10 py-5  rounded-3xl shadow-md relative w-full link link-hover">
-            <span className="text-[#CCFF00] text-xl absolute "><img src="/map.png" alt="" /></span>
+
+          <div className="bg-[#1a1a1a] px-10 py-6 rounded-3xl shadow-md relative link link-hover">
+            <span className="absolute top-5 left-5">
+              <img src="/map.png" alt="Map" className="w-6 h-6" />
+            </span>
             <p className="text-sm font-light mt-10">Noida, Uttar Pradesh 201301</p>
           </div>
         </div>
 
         {/* Footer Navigation */}
-        <div className="w-1/3 flex gap-20 mt-10  md:mt-0">
-          <div>
-            <h4 className="text-[#CCFF00] text-xl mb-4 font-normal">Menu</h4>
-            <ul className="space-y-4 font-light text-xs">
+        <div className="w-full md:w-1/2 flex flex-col md:flex-row justify-between gap-10 md:gap-16">
+
+          {/* Menu */}
+          <div className="w-full md:w-auto">
+            <button
+              className="flex justify-between items-center w-full md:block text-left"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <h4 className="Heading_5 text-[#CCFF00] mb-3">Menu</h4>
+              <span className="md:hidden text-[#CCFF00] text-lg">{menuOpen ? "-" : "+"}</span>
+            </button>
+            <ul className={`space-y-3 transition-all duration-300 overflow-hidden ${menuOpen || window.innerWidth >= 768 ? 'max-h-96' : 'max-h-0'}`}>
               <li className="link link-hover">Home</li>
               <li className="link link-hover">About</li>
               <li className="link link-hover">Services</li>
@@ -35,20 +55,36 @@ export default function FooterContacts() {
               <li className="link link-hover">Contact</li>
             </ul>
           </div>
-          <div>
-            <h4 className="text-[#CCFF00] text-xl mb-4 font-normal">Services</h4>
-            <ul className="space-y-4 font-light text-xs">
-              <li>SEO</li>
-              <li>Content Marketing</li>
-              <li>Website Design</li>
-              <li>Social Media Marketing</li>
+
+          {/* Services */}
+          <div className="w-full md:w-auto">
+            <button
+              className="flex justify-between items-center w-full md:block text-left"
+              onClick={() => setServicesOpen(!servicesOpen)}
+            >
+              <h4 className="Heading_5 text-[#CCFF00] mb-3">Services</h4>
+              <span className="md:hidden text-[#CCFF00] text-lg">{servicesOpen ? "-" : "+"}</span>
+            </button>
+            <ul className={`space-y-3 transition-all duration-300 overflow-hidden ${servicesOpen || window.innerWidth >= 768 ? 'max-h-96' : 'max-h-0'}`}>
+              <li className="link link-hover">SEO</li>
+              <li className="link link-hover">Content Marketing</li>
+              <li className="link link-hover">Website Design</li>
+              <li className="link link-hover">Social Media Marketing</li>
             </ul>
           </div>
-          <div>
-            <h4 className="text-[#CCFF00] text-xl mb-4 font-normal">Other Pages</h4>
-            <ul className="space-y-4 font-light text-xs">
-              <li>License</li>
-              <li>404</li>
+
+          {/* Other Pages */}
+          <div className="w-full md:w-auto">
+            <button
+              className="flex justify-between items-center w-full md:block text-left"
+              onClick={() => setPagesOpen(!pagesOpen)}
+            >
+              <h4 className="Heading_5 text-[#CCFF00] mb-3">Other Pages</h4>
+              <span className="md:hidden text-[#CCFF00] text-lg">{pagesOpen ? "-" : "+"}</span>
+            </button>
+            <ul className={`space-y-3 transition-all duration-300 overflow-hidden ${pagesOpen || window.innerWidth >= 768 ? 'max-h-96' : 'max-h-0'}`}>
+              <li className="link link-hover">License</li>
+              <li className="link link-hover">404</li>
             </ul>
           </div>
         </div>
